@@ -1,0 +1,490 @@
+/* ========================================
+   課題研究進捗サイト - スタイルシート
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.8;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* ========================================
+   ヘッダー
+   ======================================== */
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* ========================================
+   メインコンテンツ
+   ======================================== */
+
+main {
+    padding: 50px 40px;
+}
+
+.section {
+    margin-bottom: 50px;
+    padding: 35px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border-left: 6px solid #667eea;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    color: #667eea;
+    margin-bottom: 25px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section h3 {
+    color: #764ba2;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.3em;
+}
+
+.section p {
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.section ul,
+.section ol {
+    margin-left: 30px;
+    color: #555;
+}
+
+.section li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+.section a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.section a:hover {
+    color: #764ba2;
+    border-bottom-color: #764ba2;
+}
+
+/* ========================================
+   進捗セクション
+   ======================================== */
+
+.progress {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-left-color: #28a745;
+}
+
+.progress-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border-left: 5px solid #28a745;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.progress-item.completed h3 {
+    color: #28a745;
+}
+
+.timestamp {
+    color: #999;
+    font-size: 0.95em;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+/* ========================================
+   コンテンツアイテム
+   ======================================== */
+
+.content-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.content-item:hover {
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
+    transform: translateY(-2px);
+}
+
+.content-item h3 {
+    margin-top: 0;
+    color: #667eea;
+}
+
+/* ========================================
+   コードボックス
+   ======================================== */
+
+.code-box {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 15px 0;
+    border-left: 4px solid #667eea;
+}
+
+.code-box pre {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.code-box code {
+    color: #f8f8f2;
+}
+
+/* ========================================
+   回路図
+   ======================================== */
+
+.circuit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.component-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.component-list h3 {
+    margin-top: 0;
+    color: #667eea;
+}
+
+.component-list ul {
+    list-style: none;
+    margin: 0;
+}
+
+.component-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.component-list li:last-child {
+    border-bottom: none;
+}
+
+.circuit-diagram {
+    background: #1e1e1e;
+    color: #00ff00;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85em;
+    overflow-x: auto;
+    line-height: 1.4;
+}
+
+.circuit-diagram pre {
+    margin: 0;
+    color: #00ff00;
+}
+
+/* ========================================
+   学習ポイント
+   ======================================== */
+
+.learning-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.point {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 4px solid #667eea;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.point:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+}
+
+.point h4 {
+    color: #667eea;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.point p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+/* ========================================
+   今後の計画
+   ======================================== */
+
+.future-plans {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.plan {
+    background: white;
+    padding: 18px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.plan-date {
+    font-weight: bold;
+    color: #667eea;
+    min-width: 60px;
+    white-space: nowrap;
+}
+
+.plan-text {
+    color: #555;
+}
+
+/* ========================================
+   詳細セクション
+   ======================================== */
+
+details {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: 600;
+    color: #667eea;
+    user-select: none;
+    padding: 10px;
+    margin: -10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+summary:hover {
+    background: #f0f2ff;
+    color: #764ba2;
+}
+
+.code-full {
+    margin-top: 20px;
+}
+
+.code-full h4 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #667eea;
+    padding-top: 15px;
+    border-top: 2px solid #e9ecef;
+}
+
+.code-full h4:first-child {
+    margin-top: 0;
+    border-top: none;
+    padding-top: 0;
+}
+
+.code-full pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.85em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.code-full code {
+    font-family: 'Courier New', monospace;
+    color: #f8f8f2;
+}
+
+/* ========================================
+   フッター
+   ======================================== */
+
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    opacity: 0.95;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    border-bottom-color: #ffffff;
+}
+
+/* ========================================
+   レスポンシブデザイン
+   ======================================== */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .section {
+        padding: 25px 20px;
+        margin-bottom: 30px;
+    }
+
+    .circuit {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .learning-points {
+        grid-template-columns: 1fr;
+    }
+
+    .code-box,
+    .circuit-diagram {
+        font-size: 0.85em;
+        padding: 15px;
+    }
+
+    .content-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+
+    .section h3 {
+        font-size: 1.1em;
+    }
+
+    .plan {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .code-box,
+    .circuit-diagram {
+        font-size: 0.75em;
+        padding: 12px;
+        overflow-x: auto;
+    }
+
+    details {
+        padding: 15px;
+    }
+
+    summary {
+        padding: 5px;
+        margin: -5px;
+    }
+}
