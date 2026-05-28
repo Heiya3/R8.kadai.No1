@@ -1,1 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino R4 LED制御 - R8.kadai.No1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 R8.kadai.No1 課題研究進捗</h1>
+            <p class="subtitle">令和８年度E3B一班の課題研究</p>
+        </header>
 
+        <main>
+            <!-- 本日の進捗 -->
+            <section class="section progress">
+                <h2>📅 本日の進捗 (2026年5月28日)</h2>
+                <div class="progress-item completed">
+                    <h3>✅ Arduino R4 でLEDを光らせた</h3>
+                    <p class="timestamp">実施日: 2026年5月28日</p>
+                    <p>
+                        Arduino R4マイコンボードを使用してLEDを点灯させることに成功しました。
+                        基本的なプログラミングとハードウェア接続を学びました。
+                    </p>
+                </div>
+            </section>
+
+            <!-- 実施内容 -->
+            <section class="section">
+                <h2>📝 実施内容</h2>
+                <div class="content-item">
+                    <h3>1️⃣ ハードウェア準備</h3>
+                    <ul>
+                        <li>Arduino R4 Minima ボードの接続確認</li>
+                        <li>LED (赤色) の接続</li>
+                        <li>限流抵抗 (220Ω) の配置</li>
+                        <li>USBケーブルでパソコンに接続</li>
+                    </ul>
+                </div>
+
+                <div class="content-item">
+                    <h3>2️⃣ プログラミング</h3>
+                    <ul>
+                        <li>Arduino IDE のインストールと初期設定</li>
+                        <li>ボード設定: Arduino R4 Minima を選択</li>
+                        <li>シリアルポート設定</li>
+                        <li>基本的なスケッチ作成 (setup() と loop() 関数)</li>
+                    </ul>
+                </div>
+
+                <div class="content-item">
+                    <h3>3️⃣ コード実装</h3>
+                    <div class="code-box">
+                        <pre><code>#define LED_PIN 13
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);  // LED点灯
+  delay(1000);                  // 1秒待機
+  digitalWrite(LED_PIN, LOW);   // LED消灯
+  delay(1000);                  // 1秒待機
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <h3>4️⃣ 動作確認</h3>
+                    <ul>
+                        <li>✓ スケッチのコンパイル成功</li>
+                        <li>✓ ボードへの書き込み成功</li>
+                        <li>✓ LED が1秒間隔で点灯・消灯</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 回路図 -->
+            <section class="section">
+                <h2>⚡ 使用した回路</h2>
+                <div class="circuit">
+                    <div class="component-list">
+                        <h3>使用部品:</h3>
+                        <ul>
+                            <li>🖥️ Arduino R4 Minima × 1</li>
+                            <li>💡 LED (赤色) × 1</li>
+                            <li>📊 限流抵抗 220Ω × 1</li>
+                            <li>🔌 ジャンパーワイヤー × 2</li>
+                        </ul>
+                    </div>
+                    <div class="circuit-diagram">
+                        <pre>
+┌─────────────────────────────┐
+│   Arduino R4 Minima         │
+│                             │
+│   [GND] ←─────────┐         │
+│                   │         │
+│   [13]  ────┬─────┘         │
+│             │               │
+└─────────────┼───────────────┘
+              │
+              ├─── 220Ω抵抗
+              │
+              ├─── LED アノード(+)
+              │
+              └─── LED カソード(-)
+              
+              GND へ接続
+                        </pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学んだこと -->
+            <section class="section">
+                <h2>📚 学んだこと</h2>
+                <div class="learning-points">
+                    <div class="point">
+                        <h4>🎯 Arduino IDE の基本操作</h4>
+                        <p>スケッチの作成、コンパイル、書き込みの流れを理解しました。</p>
+                    </div>
+                    <div class="point">
+                        <h4>🎯 デジタルI/O制御</h4>
+                        <p>digitalWrite()関数を使用して、ピンの HIGH/LOW を制御する方法を学びました。</p>
+                    </div>
+                    <div class="point">
+                        <h4>🎯 タイミング制御</h4>
+                        <p>delay()関数を使用して、処理の時間待機を制御できることを習得しました。</p>
+                    </div>
+                    <div class="point">
+                        <h4>🎯 電子回路の基礎</h4>
+                        <p>LEDの極性、限流抵抗の必要性、電流の流れを実践的に学びました。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 今後の計画 -->
+            <section class="section">
+                <h2>🚀 今後の計画</h2>
+                <div class="future-plans">
+                    <div class="plan">
+                        <span class="plan-date">📅 次回:</span>
+                        <span class="plan-text">複数のLEDを制御（異なるピンで複数LED点灯）</span>
+                    </div>
+                    <div class="plan">
+                        <span class="plan-date">📅 その次:</span>
+                        <span class="plan-text">PWM制御による明るさ調整</span>
+                    </div>
+                    <div class="plan">
+                        <span class="plan-date">📅 その後:</span>
+                        <span class="plan-text">RGB LEDの色制御</span>
+                    </div>
+                    <div class="plan">
+                        <span class="plan-date">📅 最終目標:</span>
+                        <span class="plan-text">センサー入力によるインタラクティブなLED制御</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 参考資料 -->
+            <section class="section">
+                <h2>📖 参考資料</h2>
+                <ul>
+                    <li><a href="https://docs.arduino.cc/hardware/uno-r4-minima/" target="_blank">Arduino R4 Minima 公式ドキュメント</a></li>
+                    <li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/" target="_blank">digitalWrite() リファレンス</a></li>
+                    <li><a href="https://www.arduino.cc/reference/en/language/functions/time/delay/" target="_blank">delay() リファレンス</a></li>
+                    <li><a href="https://github.com/Heiya3/R8.kadai.No1" target="_blank">GitHub リポジトリ</a></li>
+                </ul>
+            </section>
+
+            <!-- スケッチコード -->
+            <section class="section">
+                <h2>💻 使用したスケッチコード</h2>
+                <details>
+                    <summary>クリックして詳細を表示</summary>
+                    <div class="code-full">
+                        <h4>led_blink.ino - 基本的なLED点滅プログラム</h4>
+                        <pre><code>/*
+ * Arduino R4 Minima - LED点滅プログラム
+ * 
+ * このプログラムはArduino R4のピン13に接続されたLEDを
+ * 1秒間隔で点灯・消灯させます
+ * 
+ * 接続:
+ * - LED アノード(+) → ピン13 (220Ω抵抗経由)
+ * - LED カソード(-) → GND
+ */
+
+#define LED_PIN 13  // LED接続用ピン
+
+void setup() {
+  // ピン13をデジタル出力モードに設定
+  pinMode(LED_PIN, OUTPUT);
+  
+  // シリアル通信初期化 (デバッグ用)
+  Serial.begin(9600);
+  Serial.println("LED Blink Program Started!");
+}
+
+void loop() {
+  // LED点灯
+  digitalWrite(LED_PIN, HIGH);
+  Serial.println("LED: ON");
+  delay(1000);  // 1000ミリ秒 (1秒) 待機
+  
+  // LED消灯
+  digitalWrite(LED_PIN, LOW);
+  Serial.println("LED: OFF");
+  delay(1000);  // 1000ミリ秒 (1秒) 待機
+}
+</code></pre>
+
+                        <h4>led_blink_fast.ino - 高速点滅バージョン</h4>
+                        <pre><code>#define LED_PIN 13
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  // 200ミリ秒間隔で高速点滅
+  digitalWrite(LED_PIN, HIGH);
+  delay(200);
+  digitalWrite(LED_PIN, LOW);
+  delay(200);
+}
+</code></pre>
+
+                        <h4>led_blink_custom.ino - カスタマイズ版</h4>
+                        <pre><code>#define LED_PIN 13
+
+// オン時間とオフ時間を変数で管理
+int onTime = 500;   // 500ミリ秒点灯
+int offTime = 1500; // 1500ミリ秒消灯
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  Serial.print("LED ON for ");
+  Serial.print(onTime);
+  Serial.println("ms");
+  delay(onTime);
+  
+  digitalWrite(LED_PIN, LOW);
+  Serial.print("LED OFF for ");
+  Serial.print(offTime);
+  Serial.println("ms");
+  delay(offTime);
+}
+</code></pre>
+                    </div>
+                </details>
+            </section>
+
+            <!-- チームメンバー -->
+            <section class="section">
+                <h2>👥 チームメンバー</h2>
+                <p>令和８年度E3B一班</p>
+                <ul>
+                    <li>プロジェクトリーダー: Heiya3</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 R8.kadai.No1 - 令和８年度E3B一班の課題研究</p>
+            <p>最終更新: 2026年5月28日</p>
+            <p><a href="https://github.com/Heiya3/R8.kadai.No1">GitHub リポジトリ</a></p>
+        </footer>
+    </div>
+</body>
+</html>
