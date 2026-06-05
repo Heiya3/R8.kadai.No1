@@ -1,42 +1,44 @@
 # R8.kadai.No1
 令和８年度E3B一班の課題研究
 
+## 課題研究テーマ
+**Bluetoothを使った自動資料読込み機**
+
+自動でドキュメントをスキャン・読込できるシステムの開発
+
+---
+
 ## 課題研究の進捗管理
 このサイトを使って課題研究の進捗を管理しています。
 
+---
+
 ## 2026年5月28日の進捗
 ### 🎯 今日の成果
-**『Arduino R4を実際に使って光らせた』**
+**Arduino UNO R4のWi-Fi連携機能を実装し、スマートフォンからの遠隔操作に成功**
 
-#### 内容
-- Arduino R4 マイコンボードを用いたLED制御の実装に成功しました
-- 基本的なLED点灯プログラムの作成と実行を完了しました
+#### 実装内容
+- Arduino UNO R4をパソコンに接続
+- Wi-Fi機能を活用してネットワーク接続
+- スマートフォンからの遠隔操作機能を実装
 
 #### 使用技術
-- **マイコン**: Arduino R4
-- **制御対象**: LED
+- **マイコン**: Arduino UNO R4
+- **通信方式**: Wi-Fi（ネットワーク経由）
+- **制御**: スマートフォンからの遠隔操作
 - **プログラミング言語**: Arduino言語（C++ベース）
 
-#### コード例
-```cpp
-// Arduino R4でLEDを点灯させるサンプルコード
-void setup() {
-  pinMode(13, OUTPUT);  // デジタルピン13をLED出力に設定
-}
-
-void loop() {
-  digitalWrite(13, HIGH);  // LEDを点灯
-  delay(1000);             // 1秒待機
-  digitalWrite(13, LOW);   // LEDを消灯
-  delay(1000);             // 1秒待機
-}
+#### システム構成
+```
+スマートフォン ←→ Wi-Fi ←→ パソコン ←→ Arduino UNO R4
 ```
 
 #### 次のステップ
-- [ ] より複雑なLED制御パターンの実装
-- [ ] センサーとの連携
-- [ ] 複数のLED制御
-- [ ] プロジェクトドキュメントの拡充
+- [ ] Bluetooth通信機能の実装
+- [ ] モータードライバーの制御
+- [ ] センサーの統合
+- [ ] 自動資料読込み機構の製作
+- [ ] ユーザーインターフェースの改善
 
 ---
 
@@ -45,12 +47,14 @@ void loop() {
 R8.kadai.No1/
 ├── README.md          (このファイル)
 ├── src/               (ソースコード)
+│   └── arduino/       (Arduino スケッチ)
 └── docs/              (ドキュメント)
 ```
 
 ## 参考資料
 - [Arduino公式ドキュメント](https://docs.arduino.cc/)
-- [Arduino R4 リファレンス](https://docs.arduino.cc/hardware/uno-r4-wifi)
+- [Arduino UNO R4 リファレンス](https://docs.arduino.cc/hardware/uno-r4-wifi)
+- [Arduino Wi-Fi通信ガイド](https://docs.arduino.cc/tutorials/uno-r4-wifi/wifi-web-server)
 
 ---
 
