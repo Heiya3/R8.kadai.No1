@@ -61,6 +61,22 @@ p {
     line-height: 1.8;
 }
 
+ul {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
 footer {
     text-align: center;
     color: white;
