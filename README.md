@@ -40,6 +40,8 @@
   <img src="Image_20260619_091159_820.png" width="250" alt="プログラム画面" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
 </div>
 
+> 注: 画像ファイルは README.md と同じフォルダに保存してください。
+
 ---
 
 ## 🎯 現段階での課題点
